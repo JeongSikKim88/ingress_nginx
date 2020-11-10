@@ -38,7 +38,7 @@ tar -xvf /opt/nginx-1.18.0.tar.gz
 
 cd /opt/nginx-1.18.0
 
-./configure --prefix=/etc/nginx --sbin-path=/etc/nginx/sbin/nginx --with-cc-opt="-Wno-error" --with-select_module --with-poll_module --with-threads --with-file-aio --with-http_realip_module --with-http_sub_module --with-http_flv_module --with-http_mp4_module --with-http_image_filter_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_slice_module --with-http_geoip_module --with-http_v2_module --with-pcre --with-pcre-jit --with-http_ssl_module --with-threads --with-file-ai
+./configure --prefix=/etc/nginx --sbin-path=/etc/nginx/sbin/nginx --with-cc-opt="-Wno-error" --with-select_module --with-poll_module --with-threads --with-file-aio --with-http_realip_module --with-http_sub_module --with-http_flv_module --with-http_mp4_module --with-http_image_filter_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_slice_module --with-http_geoip_module --with-http_v2_module --with-pcre --with-pcre-jit --with-http_ssl_module --with-threads --with-file-aio
 
 cd /opt/nginx-1.18.0
 make -j$MJOBS && make install
