@@ -4,16 +4,16 @@
 os=$(cat /etc/issue | awk '{print $1}')
 
 # update & install dependency library
-if [ $os == "CentOS" ];
+if [ $os == "Ubuntu" ];
 then
-    yum update -y
-    yum groupinstall 'Development Tools' -y
-    yum install -y httpd-devel pcre perl pcre-devel zlib zlib-devel geoip geoip-devel
-    # echo "cent"
-else
     apt-get update && apt-get install -y build-essential
     apt get install -y libpcre3 libpcre3-dev php-gd libssl-dev openssl libgd-dev libgeoip-dev zlib1g-dev libxslt-dev
     # echo "another"
+else
+    yum update -y
+    yum groupinstall 'Development Tools' -y
+    yum install -y httpd-devel pcre perl pcre-devel zlib zlib-devel geoip geoip-devel
+    # echo "cent"    
 fi
 
 
