@@ -7,12 +7,12 @@ os=$(cat /etc/issue | awk '{print $1}')
 if [ $os == "Ubuntu" ];
 then
     apt-get update && apt-get install -y build-essential
-    apt get install -y libpcre3 libpcre3-dev php-gd libssl-dev openssl libgd-dev libgeoip-dev zlib1g-dev libxslt-dev
+    apt get install -y libpcre3 libpcre3-dev php-gd libssl-dev openssl libgd-dev libgeoip-dev zlib1g-dev libxslt-dev gd gd-devel
     # echo "another"
 else
     yum update -y
     yum groupinstall 'Development Tools' -y
-    yum install -y httpd-devel pcre perl pcre-devel zlib zlib-devel geoip geoip-devel
+    yum install -y httpd-devel pcre perl pcre-devel zlib zlib-devel geoip geoip-devel openssl openssl-devel
     # echo "cent"    
 fi
 
